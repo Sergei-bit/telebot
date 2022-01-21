@@ -1,7 +1,0 @@
-*.log
-logs/*.log
-log/*.log
-
-__pycache__/
-
-settings.py 
