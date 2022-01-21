@@ -1,0 +1,11 @@
+name_bot = ""
+token = ""
+
+DB_CONFIG = dict(
+    provider='postgres', 
+    user='telebot', 
+    password='пароль', 
+    host='localhost', 
+    database='telebot'
+)
+
