@@ -3,7 +3,7 @@ from unittest.mock import Mock, patch
 import pytest
 import unittest
 from generate_ticket import create_ticket
-from echo_bot import *
+from telebot_bot import *
 
 bot_obj = Mock()
 bot_obj.text = "User"
