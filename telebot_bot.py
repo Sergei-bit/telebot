@@ -8,8 +8,6 @@ Use Python 3.9
 import telebot
 import logging
 from intents import INTENTS
-from scenarios import SCENARIOS
-from scenarios import DEFAULT_ANSWER
 from handlers import handler_name
 from handlers import handler_email
 from models import UserData
@@ -65,7 +63,7 @@ def configure_logging():
 
 @bot.message_handler(commands=["start"])
 def start_bot(message):
-    """старт бот"""
+    """команда (старт бот)"""
     bot.send_message(message.chat.id, "Привет! Я телебот!")
     bot.send_message(message.chat.id, "Для помощи набери /help")
     log.info(
@@ -75,6 +73,7 @@ def start_bot(message):
 
 @bot.message_handler(commands=["help"])
 def help_bot(message):
+    """команда (помошь)"""
     bot.send_message(
         message.chat.id, "Чтобы узнать дату введите: Дата\nЧтобы узнать место введите: Где\nЧтобы зарегистрироваться введите: /reg")
     log.info(
@@ -84,7 +83,7 @@ def help_bot(message):
 
 @bot.message_handler(commands=["reg"])
 def registration(message):
-    """регистрация"""
+    """команда (регистрация)"""
     msg = bot.send_message(message.chat.id, "Введите ваше имя")
     bot.register_next_step_handler(msg, name_registration)
     return msg.text
