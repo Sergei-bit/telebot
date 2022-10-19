@@ -38,3 +38,5 @@
 > если база не нужна закоментируйте функцию create_table() -> telebot_bot.py
 
 > ➡️ telebot_bot.py - запуск бота.
+
+![PyPI](https://img.shields.io/pypi/v/pyTelegramBotAPI?label=pyTelegramBotAPI)  ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django)
